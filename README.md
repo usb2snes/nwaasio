@@ -1,6 +1,6 @@
 # nwaasio
 
-A client implementation of NWA writed in C++ using the Asio library
+A client implementation of NWA writtenin C++ using the Asio library
 
 # Usage
 
