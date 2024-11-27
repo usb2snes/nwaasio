@@ -2,8 +2,9 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-#include "nwaasio.h"
-#include "nwaasioclient.h"
+#include <nwaasio.h>
+#include <nwaasioclient.h>
+
 nwaasio::client* client;
 bool connected;
 asio::steady_timer* connect_timer;

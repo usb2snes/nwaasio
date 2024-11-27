@@ -12,7 +12,7 @@ endif()
 project ("nwa-cli")
 
 
-include_directories("../lib")
+include_directories("../lib" "./")
 # Ajoutez une source à l'exécutable de ce projet.
 add_executable (nwa-cli "cli-client.cpp" "../lib/nwaasiaoclient.cpp"  "../lib/nwaasio.cpp")
 
