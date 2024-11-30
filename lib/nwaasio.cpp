@@ -1,5 +1,6 @@
 #include <sstream>
 #include <iomanip>
+#include <cstdint>
 #include "nwaasio.h"
 
 std::string nwaasio::error_type_string(error_type err)
