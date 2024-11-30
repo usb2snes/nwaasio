@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 #include <stdint.h>
 #include "nwaasio.h"
 #include <asio/ip/tcp.hpp>
