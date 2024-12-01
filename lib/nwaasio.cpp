@@ -1,5 +1,7 @@
 #include <sstream>
 #include <iomanip>
+#include <cstdint>
+#include <cassert>
 #include "nwaasio.h"
 
 std::string nwaasio::error_type_string(error_type err)
@@ -17,6 +19,12 @@ std::string nwaasio::error_type_string(error_type err)
 	case error_type::COMMAND_ERROR:
 		return "command_error";
 	}
+#ifdef __EXCEPTIONS
+    throw std::runtime_error("Invalid error_type");
+#else
+    assert("unknown error value" && false);
+    return "unknown";
+#endif
 }
 
 std::string nwaasio::buffer_to_hex(const uint8_t* data, size_t size, const std::string sep)

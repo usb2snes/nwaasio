@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 #include <list>
 #include <map>
 #include <string>
@@ -9,7 +10,7 @@ namespace nwaasio {
         NOT_ALLOWED,
         INVALID_COMMAND,
         INVALID_ARGUMENT,
-        COMMAND_ERROR
+        COMMAND_ERROR,
     };
     std::string error_type_string(error_type err);
     std::string buffer_to_hex(const uint8_t* data, size_t size, const std::string sep = "");
@@ -26,7 +27,7 @@ namespace nwaasio {
             INVALID,
             AERROR,
             ASCII,
-            BINARY
+            BINARY,
         };
         std::string	command;
         reply_type	type = reply_type::INVALID;

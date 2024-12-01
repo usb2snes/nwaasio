@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 #include <stdint.h>
 #include "nwaasio.h"
 #include <asio/ip/tcp.hpp>
@@ -83,7 +84,7 @@ namespace nwaasio {
             IDLE,
             WAITING_REPLY,
             PROCESSING_REPLY,
-            SENDING_DATA
+            SENDING_DATA,
         } _state = NWAState::NOT_CONNECTED;
         std::string	_hostname;
         uint32_t	_port;

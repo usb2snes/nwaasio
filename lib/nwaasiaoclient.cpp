@@ -1,3 +1,4 @@
+#include <functional>
 #include <sstream>
 #include <iostream>
 #include <regex>
@@ -6,7 +7,7 @@
 namespace nwaasio {
 
 client::client(asio::io_service& io_service, std::string hostname, uint32_t port) 
-	: _socket(io_service), _port(port), _hostname(hostname), _io_service(io_service)
+	: _hostname(hostname), _port(port), _io_service(io_service), _socket(io_service)
 {
 	_current_reply.type = reply::reply_type::INVALID;
 }
